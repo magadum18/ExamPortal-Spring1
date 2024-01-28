@@ -50,42 +50,42 @@ public class ExamserverApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        try {
+    //   try {
 
 
-            System.out.println("starting code");
+//            System.out.println("starting code");
 //
-            User user = new User();
+ //           User user = new User();
 
-            user.setFirstName("Vaibhav");
-            user.setLastName("Magadum");
-            user.setUsername("vaibhav18");
-            user.setPassword(this.bCryptPasswordEncoder.encode("1955"));
-            user.setEmail("abc@gmail.com");
-            user.setProfile("default.png");
+    //         user.setFirstName("Vaibhav");
+    //       user.setLastName("Magadum");
+    //      user.setUsername("vaibhav18");
+    //    user.setPassword(this.bCryptPasswordEncoder.encode("1955"));
+    //      user.setEmail("abc@gmail.com");
+    //        user.setProfile("default.png");
 
-            Role role1 = new Role();
-            role1.setRoleId(44L);
-            role1.setRoleName("ADMIN");
+     //        Role role1 = new Role();
+    //     role1.setRoleId(44L);
+    //        role1.setRoleName("ADMIN");
 
-            Set<UserRole> userRoleSet = new HashSet<>();
-            UserRole userRole = new UserRole();
+    //        Set<UserRole> userRoleSet = new HashSet<>();
+     //       UserRole userRole = new UserRole();
 
-            userRole.setRole(role1);
+      //      userRole.setRole(role1);
 
-            userRole.setUser(user);
+       //     userRole.setUser(user);
 
-            userRoleSet.add(userRole);
+       //     userRoleSet.add(userRole);
 
-            User user1 = this.userService.createUser(user, userRoleSet);
-            System.out.println(user1.getUsername());
-
-
-        } catch (UserFoundException e) {
-            e.printStackTrace();
+       //     User user1 = this.userService.createUser(user, userRoleSet);
+       //     System.out.println(user1.getUsername());
 
 
-        }
+      //  } catch (UserFoundException e) {
+      //      e.printStackTrace();   
+
+
+     //   }
 
 
     }
